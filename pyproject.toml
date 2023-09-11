@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "generate2307"
+version = "0.1.0"
+description = "Generate 2307 forms using generated summaries from bir alphalist"
+authors = ["paulo-lucero <104722453+paulo-lucero@users.noreply.github.com>"]
+license = "mit"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+xlwings = "^0.30.11"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
