@@ -47,6 +47,10 @@ class ConvertTo:
         return process_string(value).upper()
     
     @staticmethod
+    def proper_str(value: Any):
+        return process_string(value).title()
+    
+    @staticmethod
     def integer_str(value: Any):
         try:
             return process_string(int(value))

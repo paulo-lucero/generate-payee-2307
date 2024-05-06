@@ -147,10 +147,10 @@ class EntityItem:
         processed_mid_name = ConvertTo.cap_str(mid_name)
 
 
-        processed_address = ConvertTo.cap_str(address)
+        processed_address = ConvertTo.proper_str(address)
         validate_value_len(
             processed_address,
-            84,
+            95,
             address_msg_invalid,
             True
         )
@@ -226,7 +226,7 @@ class EntityItem:
         last_name = self.last_name
         has_last_name = bool(last_name)
 
-        given_name = merge_str_if_not_empty(self.first_name, self.mid_name)
+        given_name = self.first_name + (' ' if bool(self.mid_name.strip()) else '') + self.mid_name
         has_given_name = bool(given_name)
 
         return merge_str_if(
